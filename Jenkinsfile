@@ -9,10 +9,12 @@ pipeline{
         git 'Default'
          }
 stages{
-    stage('Source') { // Get code
+    stage('Source') { 
+        steps{// Get code
     // get code from our Git repository
     git 'https://github.com/prasanna548/DevopsBasics'
   }
+    }
    
     stage("tsting"){
         steps
