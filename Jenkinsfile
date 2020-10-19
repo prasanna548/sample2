@@ -17,8 +17,7 @@ stages{
         {
             script{
            echo 'testing testing.....'
-            swissknife.printName.name 'ram'
-            } 
+            swissknife.printName 'Ram'
         }
    }
     stage("buid"){
