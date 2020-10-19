@@ -10,22 +10,21 @@ pipeline{
          }
 stages{
    
-       stage("tsting")
-
-    {
+    stage("tsting"){
         steps
         {
             script{
            echo 'testing testing.....'
             swissknife.printName 'Ram'
+                }
         }
-   }
+    }
     stage("buid"){
         steps
         {
             sh "mvn clean package"
         }
-                   }
+                  }
         
        
 }        
