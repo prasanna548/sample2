@@ -9,22 +9,14 @@ pipeline{
         git 'Default'
          }
 stages{
-    stage("sync")
-
-    {
-        steps
-        {
-            git 'https://github.com/prasanna548/sample2.git'
-            
-        }
-   }
+   
        stage("tsting")
 
     {
         steps
         {
             script{
-          echo 'testing testing.....'
+           echo 'testing testing.....'
             swissknife.printName.name 'ram'
             } 
         }
