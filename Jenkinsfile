@@ -6,6 +6,7 @@ pipeline{
     tools{
           maven 'M2_HOME'
           jdk 'java-1.8.0-openjdk'
+        git 'git'
          }
 stages{
     stage("sync")
@@ -23,7 +24,7 @@ stages{
         steps
         {
             script{
-//echo 'testing testing.....'
+          echo 'testing testing.....'
             swissknife.printName.name 'ram'
             } 
         }
