@@ -1,6 +1,6 @@
-libraries {
-     lib('my-shared-library')
- }
+#!groovy
+@Library('my-shared-library')_
+
 pipeline{
     agent any
     tools{
@@ -14,6 +14,7 @@ stages{
         steps
         {
             git 'https://github.com/prasanna548/game-of-life.git'
+            
         }
    }
        stage("tsting")
@@ -22,6 +23,7 @@ stages{
         steps
         {
             echo 'testing testing.....'
+            printName.name= 'ram'
         }
    }
     stage("buid"){
