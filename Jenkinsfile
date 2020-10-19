@@ -5,7 +5,7 @@ pipeline{
     agent any
     tools{
           maven 'M2_HOME'
-          jdk 'JAVA_HOME'
+          jdk 'java-1.8.0-openjdk'
          }
 stages{
     stage("sync")
