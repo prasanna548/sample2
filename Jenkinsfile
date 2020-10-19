@@ -1,3 +1,6 @@
+libraries {
+     lib('my-shared-library')
+ }
 pipeline{
     agent any
     tools{
