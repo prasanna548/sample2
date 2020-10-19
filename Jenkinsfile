@@ -6,7 +6,7 @@ pipeline{
     tools{
           maven 'M2_HOME'
           jdk 'java-1.8.0-openjdk'
-        git 'git'
+        git 'Default'
          }
 stages{
     stage("sync")
@@ -14,7 +14,7 @@ stages{
     {
         steps
         {
-            git 'https://github.com/prasanna548/game-of-life.git'
+            git 'https://github.com/prasanna548/sample2.git'
             
         }
    }
