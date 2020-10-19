@@ -22,8 +22,10 @@ stages{
     {
         steps
         {
-            echo 'testing testing.....'
-            printName.name= 'ram'
+            script{
+//echo 'testing testing.....'
+            swissknife.printName.name 'ram'
+            } 
         }
    }
     stage("buid"){
