@@ -2,3 +2,4 @@ this is the sample text
 test
 test
 h
+test case
