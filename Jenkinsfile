@@ -14,7 +14,6 @@ pipeline {
             }
         }
     stage('build') {
-        agent {label "linux"}
         steps{
             
             echo "this is stage2"
