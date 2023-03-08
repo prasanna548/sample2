@@ -1,37 +1,32 @@
-#!groovy
-@Library('my-shared-library')_
-
-pipeline{
+pipeline {
+    //agent {label "linux"}
     agent any
-    tools{
-          maven 'M2_HOME'
-          jdk 'java-1.8.0-openjdk'
-        git 'Default'
-         }
-stages{
-    stage('Source') { 
-        steps{// Get code
-    // get code from our Git repository
-    git 'https://github.com/prasanna548/DevopsBasics'
-  }
-    }
-   
-    stage("tsting"){
-        steps
-        {
-            script{
-           echo 'testing testing.....'
-            swissknife.printName 'Ram'
-                }
+    // this is for reading
+
+    stages {
+        stage('chekout') {
+            steps {
+                cleanWs()
+               // git branch: 'develpment', url: 'exampleurl'
+                echo 'Hello World'
+                echo "${name}"
+                sh 'whoami'
+            }
         }
-    }
-    stage("buid"){
-        steps
-        {
-            sh "mvn clean package"
+    stage('build') {
+        agent {label "linux"}
+        steps{
+            
+            echo "this is stage2"
         }
-                  }
         
-       
-}        
     }
+    stage ('test'){
+        steps{
+         echo "this is stage3"   
+        }
+    }
+    
+}
+    
+}
