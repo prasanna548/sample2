@@ -1,7 +1,7 @@
 pipeline {
     //agent {label "linux"}
     agent any
-    // this is for reading
+    // this is for reading,...
 
     stages {
         stage('chekout') {
