@@ -4,4 +4,4 @@ newcontent2
 this is the new change
 this is the change from local repository
 testing
-
+change
