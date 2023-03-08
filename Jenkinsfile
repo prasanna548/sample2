@@ -9,7 +9,7 @@ pipeline {
                 cleanWs()
                // git branch: 'develpment', url: 'exampleurl'
                 echo 'Hello World'
-                echo "${name}"
+              //  echo "${name}"
                 sh 'whoami'
             }
         }
